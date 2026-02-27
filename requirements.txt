@@ -1,0 +1,10 @@
+# ─────────────────────────────────────────
+# Dependencias compartidas (todos los servicios)
+# ─────────────────────────────────────────
+flask
+
+# ─────────────────────────────────────────
+# ESB y servicios que hacen llamadas HTTP
+# (esb.py, loans_service.py)
+# ─────────────────────────────────────────
+requests==2.31.0

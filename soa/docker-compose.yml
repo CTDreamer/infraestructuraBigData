@@ -16,6 +16,7 @@ services:
     build:
       context: .
       dockerfile: dockerfile_books
+    container_name: books
     ports:
       - "5001:5001"
 

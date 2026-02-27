@@ -1,4 +1,5 @@
 FROM python:3.11-slim
 WORKDIR /app
-COPY monolithic.py .
-CMD ["python", "monolithic.py"]
+COPY monolithic_v2.py .
+VOLUME ["/data"]
+CMD ["python", "monolithic_v2.py"]
