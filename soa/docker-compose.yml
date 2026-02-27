@@ -1,0 +1,34 @@
+version: '3'
+
+services:
+  esb:
+    build:
+      context: .
+      dockerfile: dockerfile_esb
+    ports:
+      - "5000:5000"
+    depends_on:
+      - books
+      - loans
+      - notifications
+
+  books:
+    build:
+      context: .
+      dockerfile: dockerfile_books
+    ports:
+      - "5001:5001"
+
+  loans:
+    build:
+      context: .
+      dockerfile: dockerfile_loans
+    ports:
+      - "5002:5002"
+
+  notifications:
+    build:
+      context: .
+      dockerfile: dockerfile_notifications
+    ports:
+      - "5003:5003"
